@@ -181,15 +181,15 @@ class UrnaElectoral {
 
     public String obtenerResultados() {
         StringBuilder resultados = new StringBuilder();
-        resultados.append("Resultados de la elección:\n");
+        resultados.append("Resultados de la elección:");
 
         for (Candidato candidato : listaCandidatos) {
-resultados.append(candidato.getNombre()).append(" (").append(candidato.getPartido()).append("): ").append(candidato.getVotosRecibidos().size()).append(" votos\n");
+resultados.append(candidato.getNombre()).append(" (").append(candidato.getPartido()).append("): ").append(candidato.getVotosRecibidos().size()).append(" votos");
 
 }
 
-        resultados.append("\nTotal de votos emitidos: ").append(historialVotos.size());
-        resultados.append("\nVotos reportados: ").append(votosReportados.size());
+        resultados.append("Total de votos emitidos: ").append(historialVotos.size());
+        resultados.append("Votos reportados: ").append(votosReportados.size());
         return resultados.toString();}
 }
 
@@ -227,5 +227,5 @@ public class Main {
         
         if (candidato1.getVotosRecibidos().peek() != null) {
             urna.reportarVoto(candidato1, candidato1.getVotosRecibidos().peek().getId());}
-        System.out.println("\n" + urna.obtenerResultados());}
+        System.out.println(" " + urna.obtenerResultados());}
 }
